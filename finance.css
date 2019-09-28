@@ -1,0 +1,116 @@
+html {
+	background: url(Dark.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.audio audio {
+	display: none;
+}
+.menu p {
+	margin-right: 0px;
+	margin-left: 1000px;
+}
+.menu a {
+	color:#F00;
+}
+h1 {
+	color:#F93;
+	font-size:50px;
+}
+.summary {
+	margin-left: 0px;
+	margin-right: 670px !important;
+}
+.summary h2 {
+	color: #00F;
+}
+.summary p {
+	color:#FFF;
+}
+.summary a {
+	color: red;
+}
+.theplot {
+	margin-left: 0px;
+	margin-right: 620px !important;
+}
+.theplot h2 {
+	color:#00F
+}
+.theplot p {
+	color:#FFF;
+	margin-left: 0px;
+	margin-rigt: 620px !important;
+}
+.theplot a {
+	color:#F00;
+}
+.rating {
+	margin-left: 0px;
+	margin-right: 600px !important;
+}
+.rating h2 {
+	color:#00F;
+}
+.rating p {
+	color:#FFF;
+	margin-left: 0px;
+}
+.rating h7 {
+	color:#0F0;
+	text-decoration:overline !important;
+	font-weight:bolder;
+}
+.rating h8 {
+	text-decoration:underline
+}
+rating a {
+	color:#F00;
+}
+.reviews {
+	margin-left: 0px;
+	margin-right: 620px !important;
+}
+.reviews h2 {
+	color:#00F;
+}
+.reviews p {
+	color:#FFF;
+}
+.reviews h5 {
+	color:#0FF;
+}
+.reviews a {
+	color:#F00;
+}
+.fansite {
+	margin-left:0px;
+	margin-right: 620px !important;
+}
+.fansite h2 {
+	color:#00F;
+}
+.fansite p {
+	color:#FFF !important;
+}
+.fansite a {
+	color:#F00 !important;
+}
+.actors {
+	margin-left: 0px;
+	margin-right: 620px !important;
+}
+.actors h2 {
+	color:#00F;
+}
+.actors p {
+	color:#FFF;
+}
+.actors a {
+	color:#F00;
+}
+.actors li {
+	color:#FFF;
+}	
