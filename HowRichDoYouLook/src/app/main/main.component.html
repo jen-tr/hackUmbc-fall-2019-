@@ -1,12 +1,26 @@
-<label>
-    Name:
-    <input type="text" [formControl]="name">
-</label>
+<div align="center" layout="column" layout-align="center center">
+    <div>
+        <p>
+        </p>
+    </div>
+    <div>
+        
+            <button mat-button>Click me!</button>
+        <p>
+            <label>
+                Budget:
+                
+                  <input matInput placeholder="Budget" type="number" [formControl]="budget">
+                
+                </label>
+              </p>
+    </div>
 
-<p>
-    <button (click)="updateName()">Update Name</button>
-</p>
-
-
-<img [src]="url" height="200"> <br/>
-<input type='file' (change)="onSelectFile($event)">
+    <div>
+        <p>
+            <button matInput (click)="updateBudget()">Update Budget</button>
+        </p>
+    </div>
+    <div><img [src]="url" height="200"> <br /></div>
+    <div><input matInput type='file' (change)="onSelectFile($event)"></div>
+</div>
