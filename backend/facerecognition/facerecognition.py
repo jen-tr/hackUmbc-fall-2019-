@@ -2,7 +2,7 @@
 from hashlib import sha256
 from threading import Thread
 import face_recognition
-
+import sys
 
 def getHash(image_filename):
 	hashfcn = sha256()
@@ -12,3 +12,8 @@ def getHash(image_filename):
 		return hashfcn.hexdigest()
 	except:
 		return "-1"
+
+try:
+	print(getHash(sys.argv[1]))
+except:
+	print("-1")

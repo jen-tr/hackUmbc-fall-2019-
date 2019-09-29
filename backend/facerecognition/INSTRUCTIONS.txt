@@ -1,0 +1,5 @@
+1. Pull image from somewhere, put it in the same directory as facerecognition.py
+2. Run facerecognition.py with the image as an argument. This call should be multithreaded or async'd, since facerecognition.py takes about 2 seconds to run on my hardware
+3. Upon completion, facerecognition.py will return a hash to STDOUT.
+
+4. If the conversion fails, facerecognition.py will return -1 to STDOUT.
