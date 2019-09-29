@@ -16,21 +16,21 @@ print("[*] Connection OK!")
 stox = {'aapl','nvda','x','amzn','amd','ibm'} #add some more symbols here for fun and profit
 print("[~] Starting Iteration")
 
-#put a while true on this shit
-for i in stox:
-	try:
-		vals=db.values #use the values collection in the db
-		val=si.get_live_price(i) #query Yahoo for the price
-		postme = {} # create a dictionary to throw to the database
-		postme["symbol"]=i # fill in the symbol key
-		postme["val"]=val # fill in the value key
-		try: #this block will execute if the value is in the database
-			p=vals.find({"symbol":i})[0] # gimme a cursor for symbol, and get the first value in the cursor
-			db.vals.update_one({'_id': p['_id']},{"$set":postme}, upsert=False) #if we pass the above line, the value is in the DB. Update it's value.
-		except Exception as e: # this block will execute  if the value is not in the database
-			print("[~] Adding new symbol to DB: "+i)
-			result = vals.insert_one(postme) # add a value to the DB if it's not present
-		print("[*] Post OK for "+i)
-	except Exception as e:
-		print("[E] Error on "+i+". Symbol may not exist")
-		print("\t"+str(e))
+while True:
+	for i in stox:
+		try:
+			vals=db.values #use the values collection in the db
+			val=si.get_live_price(i) #query Yahoo for the price
+			postme = {} # create a dictionary to throw to the database
+			postme["symbol"]=i # fill in the symbol key
+			postme["val"]=val # fill in the value key
+			try: #this block will execute if the value is in the database
+				p=vals.find({"symbol":i})[0] # gimme a cursor for symbol, and get the first value in the cursor
+				db.vals.update_one({'_id': p['_id']},{"$set":postme}, upsert=False) #if we pass the above line, the value is in the DB. Update it's value.
+			except Exception as e: # this block will execute  if the value is not in the database
+				print("[~] Adding new symbol to DB: "+i)
+				result = vals.insert_one(postme) # add a value to the DB if it's not present
+			print("[*] Post OK for "+i)
+		except Exception as e:
+			print("[E] Error on "+i+". Symbol may not exist")
+			print("\t"+str(e))
