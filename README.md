@@ -2,14 +2,12 @@
 
 
 ## Main Hackers
-###  ----------------------------------------------------------------------
-Garrett <br />
-Jennifer
-Tilden
-Brian
+Garrett <br/>
+Jennifer <br/>
+Tilden <br/>
+Brian <br/>
 
 ## Consultants
-###  ----------------------------------------------------------------------
-Tai
-Zaine
-Feliz
+Tai <br/>
+Zaine <br/>
+Feliz <br/>
