@@ -4,8 +4,6 @@
         </p>
     </div>
     <div>
-        
-            <button mat-button>Click me!</button>
         <p>
             <label>
                 Budget:
@@ -21,6 +19,25 @@
             <button matInput (click)="updateBudget()">Update Budget</button>
         </p>
     </div>
+    <!--
     <div><img [src]="url" height="200"> <br /></div>
     <div><input matInput type='file' (change)="onSelectFile($event)"></div>
+    -->
+
+    
 </div>
+
+<div>
+       
+        <div><img [src]="url" height="200"> <br /></div>
+        <div>
+            <form [formGroup] = "uploadForm" (ngSubmit)="onSubmit()">      
+              <div>
+                <input type="file" name="profile" (change)="onFileSelect($event)" />
+              </div>
+              <div>
+                <button type="submit">Upload</button>
+              </div>
+            </form>
+          </div>
+  </div>
