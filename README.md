@@ -3,7 +3,7 @@
 
 ## Main Hackers
 ###  ----------------------------------------------------------------------
-Garrett
+Garrett <br />
 Jennifer
 Tilden
 Brian
