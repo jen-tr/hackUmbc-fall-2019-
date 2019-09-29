@@ -1,12 +1,47 @@
-<label>
-    Name:
-    <input type="text" [formControl]="name">
-</label>
 
-<p>
-    <button (click)="updateName()">Update Name</button>
-</p>
+<div align="center" layout="column" layout-align="center center" background="rgba(0, 0, 0, 0.5)">
+    <div>
+    <div>
+        <p>
+        </p>
+    </div>
+    <div>
+        <p>
+            <label>
+                Budget:
+                
+                  <input matInput placeholder="Budget" type="number" [formControl]="budget">
+                
+                </label>
+              </p>
+    </div>
 
+    <div>
+        <p>
+            <button matInput (click)="updateBudget()">Update Budget</button>
+        </p>
+    </div>
+    <!--
+    <div><img [src]="url" height="200"> <br /></div>
+    <div><input matInput type='file' (change)="onSelectFile($event)"></div>
+    -->
 
-<img [src]="url" height="200"> <br/>
-<input type='file' (change)="onSelectFile($event)">
+    
+</div>
+
+<div>
+       
+        <div><img [src]="url" height="200"> <br /></div>
+        <div>
+            <form [formGroup] = "uploadForm" (ngSubmit)="onSubmit()">      
+              <div>
+                <input type="file" name="profile" (change)="onFileSelect($event)" />
+              </div>
+              <div>
+                <button type="submit">Upload</button>
+              </div>
+            </form>
+          </div>
+          <div><h1>{{text}}</h1></div>
+  </div>
+</div>

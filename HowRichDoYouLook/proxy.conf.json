@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+      "target": "https://us-central1-howrichdoyoulook.cloudfunctions.net/dbHit",
+      "secure": false,
+      "logLevel": "debug",
+      "changeOrigin": true
+    }
+  }
