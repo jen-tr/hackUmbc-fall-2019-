@@ -1,1 +1,8 @@
 
+Amazon       1725.45
+Nike         92.31
+AT&T         37.43
+Apple        218.82
+Starbucks    88.37
+NASDAQ       7939.63
+DowJones    26820.25
