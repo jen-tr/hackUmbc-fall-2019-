@@ -10,12 +10,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MainComponent implements OnInit {
 
-  //SERVER_URL = "https://us-central1-howrichdoyoulook.cloudfunctions.net/dbHit";
-  SERVER_URL = "https://us-central1-howrichdoyoulook.cloudfunctions.net/faceToNum";
+  SERVER_URL = "https://us-central1-howrichdoyoulook.cloudfunctions.net/dbHit";
+  //SERVER_URL = "https://us-central1-howrichdoyoulook.cloudfunctions.net/faceToNum";
+  //SERVER_URL = "/api/"
   url;
   imageVal = -1;
   budget = new FormControl('');
   uploadForm: FormGroup;
+  tempJSON;
+  text;
 
 
   //constructor() { }
@@ -82,11 +85,37 @@ export class MainComponent implements OnInit {
     const formData = new FormData();
     formData.append('file', this.uploadForm.get('profile').value);
 
-    
-  this.httpClient.post<any>(this.SERVER_URL, formData).subscribe(
+    this.httpClient.options<any>(this.SERVER_URL).subscribe(
       (res) => console.log(res),
       (err) => console.log(err)
     );
+  // this.httpClient.post<any>(this.SERVER_URL, formData).subscribe(
+  //     (res) => console.log(res),
+  //     (err) => console.log(err)
+  //   );
+
+  var dict = {
+    "number":this.imageVal
+  };
+  this.tempJSON = JSON.stringify(dict)
+
+  var error;
+
+
+    this.httpClient.post<any>(this.SERVER_URL, this.tempJSON).subscribe(
+      (res) => this.tempJSON = res,
+      (err) => this.text = err.error.text
+     
+    );
+
+    var list = ["nvda", "x", "amd", "appl"];
+    this.imageVal = Math.floor(Math.random() * Math.floor(3))
+    this.imageVal = this.imageVal+1;
+    this.text = list[this.imageVal];
+    
+    console.log(this.tempJSON);
+    //console.log(error)
+
 
     
     
