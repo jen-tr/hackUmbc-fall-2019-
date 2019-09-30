@@ -19,6 +19,7 @@ export class MainComponent implements OnInit {
   uploadForm: FormGroup;
   tempJSON;
   text;
+  text2;
 
 
   //constructor() { }
@@ -108,10 +109,11 @@ export class MainComponent implements OnInit {
      
     );
 
-    var list = ["nvda", "x", "amd", "appl"];
+    
+    var list = ["ibm", "x", "amd", "appl"];
     this.imageVal = Math.floor(Math.random() * Math.floor(3))
-    this.imageVal = this.imageVal+1;
     this.text = list[this.imageVal];
+    this.text2 = "msft";
     
     console.log(this.tempJSON);
     //console.log(error)
